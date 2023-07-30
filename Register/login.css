@@ -58,12 +58,12 @@ form .field{
   width: 100%;
   outline: none;
   font-size: 15px;
-  color: #f9f4f4;
+  color: #000000;
   padding: 0 15px;
   border-radius: 0 5px 5px 0;
   border: 1px solid #444;
   caret-color: #efeff1;
-  background-color: #D8D8D6 ;
+  background-color: #d8d8d6bd ;
 }
 form button{
   height: 50px;
@@ -79,7 +79,7 @@ form button{
 }
 
 input:focus{
-  color: #faf5f5;
+  color: #ffffff;
   box-shadow: 0 0 5px rgba(0,255,0,.2),
               inset 0 0 5px rgba(177, 181, 177, 0.1);
   background: linear-gradient(#707070,#343333);
@@ -119,10 +119,10 @@ a:hover {
               0 2px 0 black;
               transition: all 0.5; */
   
-  /* box-shadow: 0 0 5px rgba(160, 232, 160, 0.3),
-              0 0 10px rgba(0, 255, 0, .2),
-              0 0 15px rgba(0, 255, 0, .1),
-              0 2px 0 black; */
+  box-shadow: 0 0 5px rgba(233, 241, 233, 0.3),
+              0 0 10px rgba(179, 180, 179, 0.2),
+              0 0 15px rgba(157, 161, 157, 0.1),
+              0 2px 0 rgb(119, 116, 116);
 }
 .link{
   margin-top: 25px;
@@ -136,21 +136,56 @@ a:hover {
 .link a:hover{
   text-decoration: none;
 }
+
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
-  form {
-    width: 90%; 
+  
+  .login-form {
+      width: 100%; /* Adjust the form width for smaller screens */
+      padding: 50px 25px 40px; /* Adjust the form padding for smaller screens */
+  }
+
+  .text {
+      font-size: 24px; /* Adjust the font size for the heading on smaller screens */
+  }
+
+  form .field .fas {
+      font-size: 18px; /* Adjust the icon size for smaller screens */
+  }
+
+  form .field input {
+      font-size: 13px; /* Adjust the font size for form inputs on smaller screens */
+  }
+
+  form button {
+      font-size: 14px; /* Adjust the font size for the button on smaller screens */
   }
 }
 
 @media screen and (max-width: 480px) {
-  form {
-    width: 100%; 
+  .login-form {
+      width: 100%; /* Adjust the form width for even smaller screens */
+      padding: 50px 20px 30px; /* Adjust the form padding for even smaller screens */
   }
 
-  label,
-  input,
-  button {
-    font-size: 16px;
+  .text {
+      font-size: 20px; /* Adjust the font size for the heading on even smaller screens */
   }
 
+  form .field .fas {
+      font-size: 16px; /* Adjust the icon size for even smaller screens */
+  }
+
+  form .field input {
+      font-size: 12px;
+  }
+
+  form button {
+      font-size: 13px; 
+  }
+
+  .link {
+      font-size: 12px; 
+  }
 }
